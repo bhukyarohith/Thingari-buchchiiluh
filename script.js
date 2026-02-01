@@ -7,65 +7,46 @@ const question = document.getElementById("question");
 const nameText = document.getElementById("name");
 const image = document.getElementById("main-image");
 
-let video = null;
+let currentState = "idle"; // idle | no | yes
 
-// reset everything
-function resetState() {
+function resetUI() {
   noMsg.style.display = "none";
   yesMsg.style.display = "none";
   image.src = "images/catflower.jpg";
+  question.textContent = "Will you be my Valentine?";
+  nameText.style.display = "block";
 
-  if (video) {
-    video.pause();
-    video.remove();
-    video = null;
-  }
+  noBtn.style.position = "static";
 }
 
-// NO button
+// NO CLICK
 noBtn.addEventListener("click", () => {
-  resetState();
+  resetUI();
+  currentState = "no";
 
   noMsg.style.display = "block";
   image.src = "images/gun.gif";
   question.textContent = "Choose wisely 😈";
   nameText.style.display = "none";
 
+  // move NO button
   const maxX = window.innerWidth - noBtn.offsetWidth;
   const maxY = window.innerHeight - noBtn.offsetHeight;
 
   noBtn.style.position = "absolute";
   noBtn.style.left = Math.random() * maxX + "px";
   noBtn.style.top = Math.random() * maxY + "px";
-
-  if (!video) {
-    video = document.createElement("video");
-    video.src = "./Maroon 5 - Sugar.mp4#t=42";
-    video.autoplay = true;
-    video.muted = false;
-    video.style.position = "fixed";
-    video.style.top = "50%";
-    video.style.left = "50%";
-    video.style.transform = "translate(-50%, -50%)";
-    video.style.width = "300px";
-    document.body.appendChild(video);
-  }
 });
 
-// YES button
+// YES CLICK
 yesBtn.addEventListener("click", () => {
-  resetState();
+  resetUI();
+  currentState = "yes";
 
-  noBtn.remove();
-  yesBtn.remove();
-  noMsg.style.display = "none";
+  noBtn.style.display = "none";
+  yesBtn.style.display = "none";
 
-  question.textContent = "See you on the 14th, Princess 💖";
-  nameText.style.display = "block";
   yesMsg.style.display = "block";
-
+  question.textContent = "See you on the 14th, Princess 💖";
   image.src = "images/dance.gif";
-
-  const audio = new Audio("./Minions Cheering.mp3");
-  audio.play().catch(() => {});
 });
