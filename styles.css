@@ -1,5 +1,5 @@
-/* ===== ROUNDED FONT MATCH ===== */
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap');
+/* IMPORT JOSEFIN SANS (AT TOP) */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&display=swap');
 
 body {
   margin: 0;
@@ -8,18 +8,8 @@ body {
   align-items: center;
   justify-content: center;
 
-  /* EXACT LOGIC USED IN REEL */
-  font-family:
-    "SF Pro Rounded",
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Nunito,
-    Helvetica,
-    Arial,
-    sans-serif;
-
-  background: #f5c0cd; /* exact soft pink */
+  font-family: 'Josefin Sans', sans-serif; /* Main font */
+  background: #f5c2d9; /* Soft pink */
 }
 
 /* CARD */
@@ -38,13 +28,43 @@ body {
   margin-bottom: 18px;
 }
 
-/* TEXT — THIS IS WHAT YOU CIRCLED */
+/* MAIN TEXT (Josefin Sans) */
 .hh {
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 500;
   color: #111;
   margin-bottom: 4px;
 }
 
 .pp {
-  font-size
+  font-size: 22px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 26px;
+}
+
+/* BUTTONS (Josefin Sans too) */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+}
+
+.buttons button {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 15px;
+  padding: 10px 22px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+}
+
+#yes-button {
+  background: #ff4f87;
+  color: white;
+}
+
+#no-button {
+  background: #e5e5e5;
+  color: #333;
+}
