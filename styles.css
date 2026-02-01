@@ -1,20 +1,17 @@
-/* IMPORT JOSEFIN SANS (AT TOP) */
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&display=swap');
 
 body {
   margin: 0;
   height: 100vh;
   display: flex;
-  align-items: center;
   justify-content: center;
-
-  font-family: 'Josefin Sans', sans-serif; /* Main font */
-  background: #f5c2d9; /* Soft pink */
+  align-items: center;
+  background: #f5c2d9;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
-/* CARD */
 .container {
-  background: #ffffff;
+  background: white;
   width: 400px;
   padding: 36px 30px;
   border-radius: 22px;
@@ -22,28 +19,24 @@ body {
   box-shadow: 0 18px 35px rgba(0,0,0,0.12);
 }
 
-/* IMAGE */
 .image {
   width: 115px;
   margin-bottom: 18px;
 }
 
-/* MAIN TEXT (Josefin Sans) */
 .hh {
   font-size: 20px;
   font-weight: 500;
   color: #111;
-  margin-bottom: 4px;
 }
 
 .pp {
   font-size: 22px;
   font-weight: 600;
   color: #111;
-  margin-bottom: 26px;
+  margin-bottom: 20px;
 }
 
-/* BUTTONS (Josefin Sans too) */
 .buttons {
   display: flex;
   justify-content: center;
@@ -51,20 +44,27 @@ body {
 }
 
 .buttons button {
-  font-family: 'Josefin Sans', sans-serif;
   font-size: 15px;
   padding: 10px 22px;
   border-radius: 999px;
   border: none;
   cursor: pointer;
+  font-family: inherit;
 }
 
 #yes-button {
-  background: #ff4f87;
-  color: white;
+  background: #f5c2d9;
+  border: 2px solid #ff4f87;
+  color: #111;
 }
 
 #no-button {
   background: #e5e5e5;
   color: #333;
+}
+
+.hidden-message {
+  display: none;
+  margin-top: 15px;
+  font-size: 16px;
 }
