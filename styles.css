@@ -1,4 +1,6 @@
-/* ===== PAGE BACKGROUND ===== */
+/* ===== ROUNDED FONT MATCH ===== */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap');
+
 body {
   margin: 0;
   height: 100vh;
@@ -6,68 +8,43 @@ body {
   align-items: center;
   justify-content: center;
 
-  /* EXACT APPLE SYSTEM FONT */
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text",
-               "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* EXACT LOGIC USED IN REEL */
+  font-family:
+    "SF Pro Rounded",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Nunito,
+    Helvetica,
+    Arial,
+    sans-serif;
 
-  background: #f4c2cf; /* soft pastel pink (matches screenshot) */
+  background: #f5c0cd; /* exact soft pink */
 }
 
-/* ===== CARD ===== */
+/* CARD */
 .container {
   background: #ffffff;
   width: 400px;
-  padding: 36px 32px;
-  border-radius: 20px;
+  padding: 36px 30px;
+  border-radius: 22px;
   text-align: center;
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 18px 35px rgba(0,0,0,0.12);
 }
 
-/* ===== IMAGE ===== */
+/* IMAGE */
 .image {
-  width: 110px;
+  width: 115px;
   margin-bottom: 18px;
 }
 
-/* ===== TEXT (MATCHES SCREENSHOT) ===== */
+/* TEXT — THIS IS WHAT YOU CIRCLED */
 .hh {
   font-size: 20px;
-  font-weight: 400;
+  font-weight: 600;
   color: #111;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 
 .pp {
-  font-size: 22px;
-  font-weight: 500;
-  color: #111;
-  margin-bottom: 26px;
-}
-
-/* ===== BUTTONS ===== */
-.buttons {
-  display: flex;
-  justify-content: center;
-  gap: 18px;
-}
-
-.buttons button {
-  font-family: inherit;
-  font-size: 15px;
-  padding: 10px 22px;
-  border-radius: 999px;
-  border: none;
-  cursor: pointer;
-}
-
-/* YES */
-#yes-button {
-  background: #ff4f87;
-  color: #fff;
-}
-
-/* NO */
-#no-button {
-  background: #e6e6e6;
-  color: #333;
-}
+  font-size
